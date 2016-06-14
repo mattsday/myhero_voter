@@ -1,0 +1,14 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "forcePullImage": true,
+      "network": "BRIDGE",
+      "image": "mattsday/vote:latest"
+    }
+  },
+  "id": "voter",
+  "instances": 50,
+  "cpus": 0.1,
+  "mem": 128
+}
