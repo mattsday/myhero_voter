@@ -1,14 +1,14 @@
 {
-  "container": {
-    "type": "DOCKER",
-    "docker": {
-      "forcePullImage": true,
-      "network": "BRIDGE",
-      "image": "mattsday/vote:latest"
-    }
-  },
-  "id": "voter",
-  "instances": 50,
-  "cpus": 0.1,
-  "mem": 128
+	"container": {
+		"type": "DOCKER",
+		"docker": {
+			"forcePullImage": true,
+			"network": "BRIDGE",
+			"image": "mattsday/myhero_voter:latest"
+		}
+	},
+	"id": "myherovoter",
+	"instances": 5,
+	"cpus": 0.01,
+	"mem": 32
 }
