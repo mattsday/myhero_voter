@@ -11,7 +11,7 @@ def vote (name):
 	while (True):
 		urllib2.urlopen(url)
 
-for i in range(0, 4):
+for i in range(0, 3):
 	thread.start_new_thread(vote, (urllib2.quote(my_hero),))
 
 while (True):
