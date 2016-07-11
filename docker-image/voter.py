@@ -4,7 +4,7 @@ import time
 import sys
 
 my_hero = sys.argv[1]
-base_url = "http://myhero-web.metacloud.mrsmiggins.net/results?hero="
+base_url = "http://myhero-web.mantl.ukidcv.cisco.com/results?hero="
 
 def vote (name):
 	url = base_url + name
