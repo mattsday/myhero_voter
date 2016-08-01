@@ -21,15 +21,17 @@ if [[ -z $MY_HERO_URL ]]; then
 	read -r MY_HERO_URL
 fi
 if [[ -z $MY_HERO_THREADS ]]; then
-	echo "Enter number of threads per process (e.g. 4)"
+	echo "Enter number of threads per container (e.g. 4)"
 	read -r MY_HERO_THREADS
 fi
 if [[ -z $MY_HERO ]]; then
 	echo 'Enter hero name to vote for (e.g. Captain Cloud)'
 	read -r MY_HERO
 fi
-
-
+if [[ -z $MY_HERO_INSTANCES ]]; then
+	echo "Enter number of containers to deploy (e.g. 5)"
+	read -r MY_HERO_INSTANCES
+fi
 
 # Template file
 template_file="voter-template.json"
@@ -38,6 +40,7 @@ config_file="voter.json"
 
 # Build template
 cp -f "$template_file" "$config_file"
+sed -i "s/REPLACE_WITH_MY_HERO_INSTANCES/$MY_HERO_INSTANCES/" $config_file
 sed -i "s/REPLACE_WITH_MY_HERO_THREADS/$MY_HERO_THREADS/" $config_file
 sed -i "s#REPLACE_WITH_MY_HERO_URL#$MY_HERO_URL#" $config_file
 sed -i "s/REPLACE_WITH_MY_HERO/$MY_HERO/" $config_file

@@ -8,7 +8,7 @@
 		}
 	},
 	"id": "myherovoter",
-	"instances": 5,
+	"instances": REPLACE_WITH_MY_HERO_INSTANCES,
 	"cpus": 1,
 	"mem": 128,
 	"env":{
