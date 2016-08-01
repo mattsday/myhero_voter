@@ -1,0 +1,19 @@
+{
+	"container": {
+		"type": "DOCKER",
+		"docker": {
+			"forcePullImage": true,
+			"network": "BRIDGE",
+			"image": "mattsday/myhero_voter:latest"
+		}
+	},
+	"id": "myherovoter",
+	"instances": 5,
+	"cpus": 1,
+	"mem": 128,
+	"env":{
+		"MY_HERO": "REPLACE_WITH_MY_HERO",
+		"MY_HERO_URL": "REPLACE_WITH_MY_HERO_URL",
+		"MY_HERO_THREADS": "REPLACE_WITH_MY_HERO_THREADS"
+	}
+}
